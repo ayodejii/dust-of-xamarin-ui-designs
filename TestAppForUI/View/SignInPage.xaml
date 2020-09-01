@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#791AE5"
+             x:Class="TestAppForUI.View.SignInPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal" Margin="0, 10, 0, 0">
+                    <StackLayout Margin="20, 0, 0, 0" HorizontalOptions="Start">
+                        <Image Source="iconclose.png" HeightRequest="30" HorizontalOptions="Start" Aspect="AspectFit" WidthRequest="30"/>
+                        <Label Text="Create Your Account" 
+                               LineBreakMode="WordWrap"
+                               VerticalOptions="CenterAndExpand"
+                               FontSize="30" TextColor="White" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <Image Source="iconWritingLogin.png" WidthRequest="150" Aspect="AspectFit"/>
+                </StackLayout>
+                <cake:PancakeView VerticalOptions="FillAndExpand" CornerRadius="40,40,0,0" BackgroundColor="White">
+                    <StackLayout>
+                        <StackLayout Margin="30">
+                            <Label Text="Email" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="20"/>
+                            <cake:PancakeView CornerRadius="30" BorderThickness="1" BackgroundColor="White" Margin="1,0,1,0">
+                                <Entry VerticalOptions="End"/>
+                            </cake:PancakeView>
+                        </StackLayout>
+                        <StackLayout Margin="30">
+                            <Label Text="Password" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="20"/>
+                            <cake:PancakeView CornerRadius="30" BorderThickness="1" BackgroundColor="White" Margin="1,0,1,0">
+                                <Entry VerticalOptions="End"/>
+                            </cake:PancakeView>
+                        </StackLayout>
+                        <StackLayout Margin="180,0,0,0" Orientation="Horizontal">
+                            <Label Text="Forgot Password?" TextDecorations="Underline" FontSize="Subtitle" FontAttributes="Bold" LineBreakMode="NoWrap" />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" Margin="20">
+                            <Button Text="Login" BackgroundColor="#791AE5" CornerRadius="10" />
+                            <Label Text="Or" Margin="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand" Spacing="15" Orientation="Horizontal">
+                            <cake:PancakeView HeightRequest="60" WidthRequest="60" BackgroundColor="#FF5A00" CornerRadius="20" BorderThickness="1">
+                                <Image Source="icongoogle" Margin="15" Aspect="AspectFit" HeightRequest="20" WidthRequest="20" />
+                            </cake:PancakeView>
+                            <cake:PancakeView HeightRequest="60" WidthRequest="60" BackgroundColor="#4359AC" CornerRadius="10">
+                                <Image Source="iconfacebook" Margin="15" Aspect="AspectFit" HeightRequest="20" WidthRequest="20" />
+                            </cake:PancakeView>
+                            <cake:PancakeView HeightRequest="60" WidthRequest="60" BackgroundColor="#1DA1F2" CornerRadius="10">
+                                <Image Source="icontwitter" Margin="15" Aspect="AspectFit" HeightRequest="20" WidthRequest="20" />
+                            </cake:PancakeView>
+                        </StackLayout>
+                        <AbsoluteLayout Margin="0, 10, 0, 0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                            <Label HorizontalOptions="CenterAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Don't have an Account? "/>
+                                        <Span Text="Sign up" TextColor="#791AE5"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </AbsoluteLayout>
+                        
+                        
+                    </StackLayout>
+                </cake:PancakeView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

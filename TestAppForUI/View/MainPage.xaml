@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodel="clr-namespace:TestAppForUI.ViewModel"
+             mc:Ignorable="d"
+             x:Class="TestAppForUI.View.MainPage">
+    <ContentPage.BindingContext>
+        <viewmodel:HomeViewModel x:Name="vlogin" />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <CarouselView ItemsSource="{Binding PageContents}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="{Binding Header}" FontSize="Title" 
+                                       HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" 
+                                       TextColor="Black"  FontAttributes="Bold"/>
+                                <Label Text="{Binding Child}" FontSize="Subtitle" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                            <Image Source="{Binding Image}" Aspect="AspectFit" />
+                        </StackLayout>                        
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <StackLayout Margin="10">
+                <Button Text="Login" HorizontalOptions="FillAndExpand" BackgroundColor="DodgerBlue" Command="{Binding LoginCommand}"/>
+                <Button Text="Register" HorizontalOptions="FillAndExpand" BackgroundColor="DarkSlateBlue" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
