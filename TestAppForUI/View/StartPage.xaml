@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="TestAppForUI.View.StartPage"
+             BackgroundColor="#791AE5">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Margin="10, 0, 0, 0">
+                        <Image HorizontalOptions="Start" Source="hamburgerMenu.png" HeightRequest="30" Aspect="AspectFit" />
+                        <Label HorizontalOptions="Start" Text="Start Your Workday Comfortably" FontSize="Medium" LineBreakMode="WordWrap"
+                                HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <Image Source="iconSitting.png" WidthRequest="200" Aspect="AspectFit"  HorizontalOptions="End" HeightRequest="200"/>
+                </StackLayout>
+                <cake:PancakeView BorderThickness="1" CornerRadius="30">
+                    <Entry Placeholder="Search Here" />
+                </cake:PancakeView>
+            </StackLayout>
+            <cake:PancakeView BackgroundColor="White" CornerRadius="10, 10, 0, 0" VerticalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="Center">
+                    <Label HorizontalOptions="Center" HorizontalTextAlignment="Center" Text="How To Get Started" Margin="0, 10, 0, 10" FontAttributes="Bold" TextColor="#791AE5" />
+                    <StackLayout Spacing="20" HorizontalOptions="Center">
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <StackLayout HorizontalOptions="Center">
+                                <Image Source="im1.png" Aspect="AspectFit" HeightRequest="70" WidthRequest="70"/>
+                                <Label Text="Create Your Account" HorizontalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="100" LineBreakMode="WordWrap" FontAttributes="Bold" />
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="Center">
+                                <Image Source="im2.png" Aspect="AspectFit" HeightRequest="70" WidthRequest="70"/>
+                                <Label Text="Plan Your Journeys" HorizontalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="100" LineBreakMode="WordWrap" FontAttributes="Bold" />
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" Spacing="20">
+                            <StackLayout HorizontalOptions="Center">
+                                <Image Source="im3.png" Aspect="AspectFit" HeightRequest="70" WidthRequest="70"/>
+                                <Label Text="Make Your Driver" HorizontalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="100" LineBreakMode="WordWrap" FontAttributes="Bold" />
+                            </StackLayout>
+                            <cake:PancakeView>
+                                <StackLayout HorizontalOptions="Center" BackgroundColor="Yellow">
+                                    <!--<cake:PancakeView>-->
+                                    <Image Source="im4.png" Aspect="AspectFit" HeightRequest="70" WidthRequest="70" Margin="0, 10, 0, 0"/>
+                                    <Label Text="Enjoy Your Journeys" HorizontalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="100" Margin="0, 0, 0, 8" LineBreakMode="WordWrap" FontAttributes="Bold" />
+                                    <!--</cake:PancakeView>-->
+                                    <!--<Image Source="im4.png" Aspect="AspectFit" HeightRequest="70" WidthRequest="70"/>
+                                    <Label Text="Enjoy Your Journeys" HorizontalOptions="Center" HorizontalTextAlignment="Center" WidthRequest="100" LineBreakMode="WordWrap" FontAttributes="Bold" />-->
+                                </StackLayout>
+                            </cake:PancakeView>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </cake:PancakeView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

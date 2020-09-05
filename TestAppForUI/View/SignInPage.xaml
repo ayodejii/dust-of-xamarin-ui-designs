@@ -2,10 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:viewmodel="clr-namespace:TestAppForUI.ViewModel"
              mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
              BackgroundColor="#791AE5"
              x:Class="TestAppForUI.View.SignInPage">
+    <ContentPage.BindingContext>
+        <viewmodel:SignInViewModel x:Name="vm" />
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <ScrollView>
             <StackLayout VerticalOptions="FillAndExpand">
@@ -19,7 +22,7 @@
                     </StackLayout>
                     <Image Source="iconWritingLogin.png" WidthRequest="150" Aspect="AspectFit"/>
                 </StackLayout>
-                <cake:PancakeView VerticalOptions="FillAndExpand" CornerRadius="40,40,0,0" BackgroundColor="White">
+                <cake:PancakeView VerticalOptions="FillAndExpand" Elevation="10" BorderThickness="10" CornerRadius="40,40,0,0" BackgroundColor="White">
                     <StackLayout>
                         <StackLayout Margin="30">
                             <Label Text="Email" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="20"/>
@@ -33,14 +36,14 @@
                                 <Entry VerticalOptions="End"/>
                             </cake:PancakeView>
                         </StackLayout>
-                        <StackLayout Margin="180,0,0,0" Orientation="Horizontal">
+                        <StackLayout Margin="250,0,0,0" Orientation="Horizontal">
                             <Label Text="Forgot Password?" TextDecorations="Underline" FontSize="Subtitle" FontAttributes="Bold" LineBreakMode="NoWrap" />
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
                             </StackLayout.GestureRecognizers>
                         </StackLayout>
                         <StackLayout HorizontalOptions="CenterAndExpand" Margin="20">
-                            <Button Text="Login" BackgroundColor="#791AE5" CornerRadius="10" />
+                            <Button Text="Login" BackgroundColor="#791AE5" CornerRadius="10" Command="{Binding SignInCommand}" />
                             <Label Text="Or" Margin="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
                         </StackLayout>
                         <StackLayout HorizontalOptions="CenterAndExpand" Spacing="15" Orientation="Horizontal">

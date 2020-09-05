@@ -163,4 +163,25 @@
   <ItemGroup>
     <BundleResource Include="Resources\iconWritingLogin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\hamburgerMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\im4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\im1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\im2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\im3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\search%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconSitting.png" />
+  </ItemGroup>
 </Project>
