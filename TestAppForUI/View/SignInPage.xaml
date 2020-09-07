@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:viewmodel="clr-namespace:TestAppForUI.ViewModel"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:cake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:viewmodel="clr-namespace:TestAppForUI.ViewModel" xmlns:customrenderers="clr-namespace:TestAppForUI.CustomRenderers"
              mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
              BackgroundColor="#791AE5"
              x:Class="TestAppForUI.View.SignInPage">
@@ -27,13 +27,14 @@
                         <StackLayout Margin="30">
                             <Label Text="Email" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="20"/>
                             <cake:PancakeView CornerRadius="30" BorderThickness="1" BackgroundColor="White" Margin="1,0,1,0">
-                                <Entry VerticalOptions="End"/>
+                                <customrenderers:BorderLessEntry VerticalOptions="End"/>
                             </cake:PancakeView>
                         </StackLayout>
                         <StackLayout Margin="30">
                             <Label Text="Password" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" FontSize="20"/>
-                            <cake:PancakeView CornerRadius="30" BorderThickness="1" BackgroundColor="White" Margin="1,0,1,0">
-                                <Entry VerticalOptions="End"/>
+                            <cake:PancakeView CornerRadius="30" BorderThickness="1" 
+                                              BackgroundColor="White" Elevation="20" Margin="1,0,1,0">
+                                <customrenderers:BorderLessEntry VerticalOptions="End"/>
                             </cake:PancakeView>
                         </StackLayout>
                         <StackLayout Margin="250,0,0,0" Orientation="Horizontal">
@@ -67,8 +68,6 @@
                                 </Label.FormattedText>
                             </Label>
                         </AbsoluteLayout>
-                        
-                        
                     </StackLayout>
                 </cake:PancakeView>
             </StackLayout>

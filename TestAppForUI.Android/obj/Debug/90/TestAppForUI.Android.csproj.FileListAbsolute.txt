@@ -515,3 +515,4 @@ C:\Users\Isaac\source\repos\TestAppForUI\TestAppForUI.Android\obj\Debug\90\stamp
 C:\Users\Isaac\source\repos\TestAppForUI\TestAppForUI.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Isaac\source\repos\TestAppForUI\TestAppForUI.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Isaac\source\repos\TestAppForUI\TestAppForUI.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Isaac\source\repos\TestAppForUI\TestAppForUI.Android\obj\Debug\90\android\src\crc64be06ef2ac704fdbe\AndroidEntryRenderer.java
